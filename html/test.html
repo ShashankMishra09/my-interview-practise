@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ol li:nth-child(2){
+            color: red;
+        }
+        p:focus{
+            border: 2px solid blue;
+           background-color: #9f0404;
+        }
+        p{
+          color: blue !important; 
+        }
+        .black{
+          color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Example Page</h1>
+
+    <p tabindex="0">Here is a quote from a famous author:</p>
+    <p class="black">“The only way to do great <del>work</del>  is to love what you do.”</p>
+    <video width="640" height="360" controls loop>
+      <source src="her.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+
+    <audio controls loop>
+      <source src="GTA San Andreas CJ rap.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
+    <hr />
+    <ol type="1" start="7">
+      <li>test 1</li>
+      <li>test 2</li>
+      <li>test 4</li>
+    </ol>
+    <ul>
+      <li>test 1</li>
+      <li>test 2</li>
+      <li>test 4</li>
+    </ul>
+    <hr />
+    <h1>definition list</h1>
+    <dl compact>
+      <dt>term-1</dt>
+      <dd>def-1</dd>
+      <dt>term-2</dt>
+      <dd>def-2</dd>
+      <dt>term-3</dt>
+      <dd>def-3</dd>
+    </dl>
+    <hr />
+    <h1>Table</h1>
+    <table>
+      <colgroup>
+        <col style="background-color: #ff0000" />
+        <col style="background-color: #ffee00" />
+        <col style="background-color: #0400ff" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Head 1</th>
+          <th>Head -2</th>
+          <th>Head 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data-1</td>
+          <td>Data-2</td>
+          <td>Data-3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Footer 1</td>
+          <td>Footer 2</td>
+          <td>Footer 3</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+    <h1>image map</h1>
+    <img
+      src="jongsun-lee-F-pSZO_jeE8-unsplash.jpg"
+      usemap="#exampleMap"
+      alt="Example Image"
+      height="1000"
+      width="1200"
+    />
+    <map name="exampleMap">
+      <area shape="rect" coords="32,43,280,300" href="page1.html" alt="Area 1" style="background-color: azure;" />
+      <area shape="circle" coords="150,150,50" href="page2.html" alt="Area 2" style="background-color: azure;" />
+      <!-- Additional areas can be defined -->
+    </map>
+    <iframe src="page2.html" frameborder="90" height="600" width="800"></iframe>
+    <a href="page2.html">page 2</a>
+
+
+
+    <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Age</th>
+          </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Aman</td>
+      <td>30</td>
+      </tr>
+      <tr>
+      <td>Rahul</td>
+      <td>20</td>
+      </tr>
+      <tr>
+      <td>Ajay</td>
+      <td>40</td>
+      </tr>
+      </tbody>
+      
+      </table>
+
+    <footer>- Steve Jobs &copy; &cacute; &caps; &#169; </footer>
+  </body>
+</html>

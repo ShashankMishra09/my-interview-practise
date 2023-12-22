@@ -1,0 +1,441 @@
+var a = 10;
+
+var b = 20;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log(a);
+console.log(b);
+
+var a = 10
+var b = 20
+
+a = a+b;
+b=a-b;
+a=a-b;
+
+console.log(a,b);
+
+var new_arr = ["Aman","aman", 'néha', "AMAn", "Neha", "AMAN"]
+
+for(var i = 0; i < new_arr.length;i++){
+    if(new_arr[i].toUpperCase()== "AMAN"){
+        console.log("discount eligible")
+    }
+    else{
+        console.log("No discount")
+    }
+}
+
+setTimeout(() => {
+    console.log("Hello");
+}, 0);
+
+console.log("Hello Word");
+
+setTimeout(() => {
+    console.log("Hello Sam");
+}, 5000);
+
+const app = (a, b) => {
+  a = a + b;
+  return a;
+};
+
+setTimeout((a, b) => {
+  a = 10;
+  b = 20;
+  console.log(a + b + " Hello ji");
+}, 0);
+
+const add = (num1, num2) => {
+  return (myPromise = new Promise((resolve, reject) => {
+    if (typeof num1 !== "number" || typeof num2 !== "number") {
+        reject(new Error("That is not right"))
+    }
+    else{
+        const sum = num1+num2;
+        resolve(sum)
+    }
+  }));
+};
+
+const n1 = 10;
+const n2 = 10;
+
+add(n1,n2).then(result=>{
+    console.log(`This is rsult ${result}`);
+})
+.catch(error=>{
+    console.error(`Error: ${error.message}`)
+})
+
+const ans =   app(50,50);
+
+console.log(ans);
+
+const num = [1,2,3,3,4,2,5,6,5,7,7,6,1]
+const duplicate = num.filter((ele,index,arr)=>{
+   return arr.indexOf(ele)!==index
+})
+
+console.log(duplicate);
+
+const name = ["raj", "Aman", "Raj", "shalu", "Sam", "aman"];
+
+const duplicate = name.filter((ele, index, arr) => {
+    // Convert the current element and all elements in the array to uppercase
+    // const upperEle = ele.toUpperCase();
+    const upperArr = arr.map(item => item.toUpperCase());
+
+    // Check if the index of the first occurrence of the current element (in uppercase) is not equal to the current index.
+    // If true, it means the element has occurred before in a case-insensitive manner.
+    return upperArr.indexOf(ele.toUpperCase()) !== index;
+});
+
+console.log(duplicate);
+
+const num = [1, 2, 3, 46, 5, 46, 22];
+
+const filt = num.filter((res, index, arr) => {
+  return arr.indexOf(res) !== index;
+});
+
+console.log(filt);
+
+const ans = num.map((res,index,arr)=>{
+    return res+index
+})
+console.log(ans);
+
+const max = (arr) => {
+    return arr.reduce((pre,cur)=>{
+        return pre>cur?pre:cur;
+    })
+}
+
+console.log(max(num));
+
+Fibonacci series
+
+const fibo = (n) => {
+    const ar = [0,1]
+
+    for(i=2;i<n;i++){
+        ar.push(ar[i-2]+ar[i-1])
+    }
+    return ar;
+}
+
+console.log(fibo(10));
+
+let a=0,b=1,temp;
+console.log(a);
+console.log(b);
+for(i=0;i<=10;i++){
+    temp = a+b;
+    console.log(temp);
+    a=b;
+    b=temp;
+}
+
+const rev = (str) => {
+    let revs = ""
+    for(let i=str.length-1;i>=0;i--){
+        revs += str[i]
+    }
+    return revs
+}
+
+console.log(rev("Shashank"));
+
+var a = "Shashank"
+
+console.log(a.split("").reverse().join(""));
+
+const longWord = (str) => {
+    const words = str.split(" ");
+    let long = ""
+
+    for (let word of words){
+        if(word.length>long.length){
+            long = word
+        }
+    }
+    return long
+}
+
+var sh = 'This is a long sentence wherethere is the longest woord'
+
+console.log(longWord(sh));
+
+var og = "racrecar"
+
+var l = og.length;
+
+for(let i = 0;i<l/2;i++){
+    if (og[i]!==og[l-1-i]) {
+        console.log("is not Palindrome");
+    }
+    else{
+        console.log("is Palindrome")
+    }
+}
+
+const palindrome = (str) => {
+    const revstr = str.split("").reverse().join("")
+    return revstr
+}
+
+if(og==palindrome(og)){
+    console.log("is Palindrome");
+}
+else{
+    console.log("is not Palindrome");
+}
+
+const prime = (num) => {
+    if(num===1){
+        return "Neither prime or coposte"
+    }
+    if(num===0){
+        return "not prime"
+    }
+    if(num === 2){
+        return " prime"
+    }
+    for(i=1;i<=num;i++){
+        if(num%i===1){
+            return " prime"
+        }
+        else{
+            return "not prime"
+        }
+    }
+}
+
+console.log(prime(2));
+
+const removeDuplicate = (arr) => {
+    let fil = arr.filter((ele,index,a)=>{
+        return a.indexOf(ele) === index;
+    })
+    // arr.length = 0
+    // arr.push(...fil)
+    return fil
+}
+
+var v = [1,2,2,3,4,5,1,5];
+
+console.log(removeDuplicate(v));
+
+or
+
+const uni = (arr) => {
+    return [...new Set(arr)]
+}
+
+var v = [1,2,2,3,4,5,1,5];
+
+console.log(uni(v));
+
+const ana = (str1,str2) => {
+  var  l1=str1.length;
+  var  l2=str2.length
+    if(l1===l2){
+        const sort1 = str1.split("").sort().join("");
+        const sort2 = str2.split("").sort().join("");
+        if(sort1==sort2){
+            return "is anagram"
+        }else{
+            return "not anagram"
+        }
+    }else{
+        return "not anagram"
+    }
+}
+
+console.log(ana("ama","aam"));
+
+const vowel = ["a","e","i","o","u"]
+
+const check = (str) => {
+   let count = 0;
+   for(let char of str.toLowerCase()){
+    if(vowel.includes(char)){
+        count++;
+    }
+   }
+   return count;
+}
+
+console.log(check("shashankm i shr a"));
+
+const big = (arr) => {
+    let biggest = arr[0];
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]>biggest){
+            biggest = arr[i]
+        }
+    }
+    return biggest
+}
+
+var v = [1,2,3,4,7,59,11]
+
+console.log(big(v));
+
+Factorial
+
+const fact  =  (n) => {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * fact(n - 1);
+    }
+}
+
+console.log(fact(5));
+
+const fact = (n) => {
+    var ans = 1
+    
+    if(n===1&&n===0){
+        return 1
+    }
+    else{
+        for(let i=2;i<=n;i++){
+             ans *= i;
+        }
+        return ans
+    }
+    
+}
+
+console.log(fact(5));
+
+const sp = (str)=>{
+    var s = ""
+    for(let i=0;i<str.length;i++){
+        if(str[i]==" "){
+            continue;
+        }
+        else{
+            s += str[i];
+        }
+    }
+    return s
+}
+
+console.log(sp("This is"));
+
+
+const person = {
+    name: "shashank",
+    age: 22,
+    projects:["game","blog","portfolio"],
+}
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.projects[1]);
+
+
+const a = (b) => {
+    let x=10;
+    var add = b+b;
+    if(x<add){
+        return x
+    }else{
+        return add;
+    }
+}
+
+console.log(a(3));
+
+console.log(a);
+console.log(b);
+
+var a= 10;
+
+
+var a = [1,2,3]
+var f = {a:1,b:2,c:3}
+
+for(let val of a){
+    console.log(val);
+}
+
+for (const key in f) {
+   console.log(key);
+}
+
+a.forEach(element => {
+    console.log(element);
+});
+Object.values(f).forEach((element) => {
+    console.log(element);
+});
+Object.keys(f).forEach((element) => {
+    console.log(element);
+});
+
+const add = (x,y)=>{
+    return x+y
+}
+const divide = (x,y)=>{
+    return x/y
+}
+const multi = (x,y)=>{
+    return x*y
+}
+
+const display = (x,y,op) => {
+    
+    return op(x,y);
+}
+
+console.log(display(2,3,add));
+console.log(display(2,3,multi));
+console.log(display(21,3,divide));
+
+const f = (x)=>{
+    const l = (y) => {
+        var res = x+y
+        return res
+    }
+    return l;
+}
+
+var ans = f(2)(3)
+
+console.log(ans);
+
+is it a clouser
+
+const promise = new Promise((resolve,reject)=>{
+    
+        const n = Math.floor(Math.random())*10
+        if(n===10){
+            resolve(" ten it is ");
+        }
+        else{
+            reject("not 10");
+        }
+         
+   
+})
+
+promise.then(res=>{
+    console.log(res);
+}).catch(err=>{
+    console.error(err)
+})
+
+var p = {"s":10,};
+
+console.log(this.v);
+
+console.log(this);
